@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue双向绑定</title>
+</head>
+<div id="app">
+    <input type="text" v-model="num">
+    <button @click="num++">点我</button>
+    <h2>
+        {{name}} 非常美,
+        有{{num}}位为他排队。
+    </h2>
+</div>
+<body>
+<script src="./js/vue.js"></script>
+<script type="text/javascript">
+    // 生成一个Vue实例
+    var app = new Vue({
+        el:"#app", // el,即element。要渲染的的页面元素
+        data:{ // 数据
+            name:"迪丽热巴",
+            num:1
+        }
+    })
+</script>
+</body>
+</html>

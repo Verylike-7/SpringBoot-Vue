@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>vue 入门</title>
+</head>
+<body>
+<div id="app">
+  <h1>{{name}}非常美</h1>
+</div>
+
+<script src="js/vue.js"></script>
+<script>
+  // 定义VUE对象
+  var app = new Vue({
+    el:"#app", // el,即element。要渲染的的页面元素
+    data:{ // 数据
+      name:"迪丽热巴"
+    }
+  })
+</script>
+</body>
+</html>

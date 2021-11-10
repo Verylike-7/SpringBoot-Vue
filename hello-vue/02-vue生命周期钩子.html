@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>02-vue生命周期钩子</title>
+</head>
+<body>
+<div id="app">
+  {{msg}}
+</div>
+<script src="./js/vue.js"></script>
+<script type="text/javascript">
+  let vm = new Vue({
+    el:"#app",
+    data:{
+      msg: '' // hello初始化为空
+    },
+    created(){
+      this.msg = "hello, world！ 我出生了！";
+    }
+  })
+</script>
+</body>
+</html>

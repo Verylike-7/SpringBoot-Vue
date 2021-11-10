@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS 加强</title>
+</head>
+<body>
+<div >
+  <h1>JS加强</h1>
+</div>
+<script>
+  // 1.定义一个JS对象，包含两个属性：name、age，包含一个函数：sayHi()
+  let p = {
+    name: "迪丽热巴",
+    sex: "女",
+    aihao: "男",
+    sayHi(){
+      console.log("hi, 我是" + name + ", 性别" + sex +",爱好"+aihao)
+    }
+  }
+  // 2.访问对象的属性
+  // 2.1.通过 对象名.属性名 访问
+  console.log(p.name)
+  // 2.2.通过 对象['属性名']访问
+  console.log(p['name'])
+  // 2.3.通过 对象[字符串] 访问，这里字符串的值必须等于对象的属性名
+  let val = 'name';
+  console.log(p[val]);
+  // 3.调用对象的方法
+  p.sayHi();
+</script>
+</body>
+</html>

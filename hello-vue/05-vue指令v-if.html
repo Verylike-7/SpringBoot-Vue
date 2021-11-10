@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>05-vue指令v-if</title>
+</head>
+<body>
+<div id="app">
+  <!--事件中直接写js片段-->
+  <button @click="show = !show">你打我啊</button><br/>
+  <h1 v-if="show">
+    我就打你了！
+  </h1>
+
+
+</div>
+<script src="./js/vue.js"></script>
+<script type="text/javascript">
+  var app = new Vue({
+    el:"#app",
+    data:{
+      show:false
+    }
+  })
+</script>
+</body>
+</html>

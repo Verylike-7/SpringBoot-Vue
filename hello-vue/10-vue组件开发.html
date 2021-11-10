@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>10-vue组件开发</title>
+</head>
+<div id="app">
+    <btn></btn>
+<body>
+<script src="./js/vue.js"></script>
+<script type="text/javascript">
+    // 定义组件
+    let btn = {
+        template:`
+     <div style="margin: 5px">
+       <button @click="handleClick" style="background-color:#05c7f5;color: white;border: 0; line-height: 30px">
+         你点了我{{num}}次，我记住你了!
+       </button>
+     </div>
+    `,
+        data(){
+            return {
+                num: 0
+            }
+        },
+        methods:{
+            handleClick(){
+                this.num++
+            }
+        }
+    }
+
+    // 定义组件
+    Vue.component("btn", btn);
+    let vm = new Vue({
+        el: "#app",
+    })
+</script>
+</body>
+</html>

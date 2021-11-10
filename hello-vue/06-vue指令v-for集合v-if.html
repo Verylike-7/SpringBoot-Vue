@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>06-vue指令v-for</title>
+</head>
+<body>
+<div id="app">
+  <ul>
+    <!--需求：男士用蓝色字体，女士用红色字体-->
+      <li v-for="(user,index) in users" >
+        <div v-if="user.gender === '女'" style="color: red">
+          {{index}} - {{user.name}} : {{user.gender}} : {{user.age}}
+        </div>
+        <div v-else style="color: blue">
+          {{index}} - {{user.name}} : {{user.gender}} : {{user.age}}
+        </div>
+      </li>
+  </ul>
+</div>
+<script src="./js/vue.js"></script>
+<script type="text/javascript">
+  var vm = new Vue({
+    el:"#app",
+    data:{
+      users:[
+        {name:'柳岩', gender:'女', age: 21},
+        {name:'虎哥', gender:'男', age: 30},
+        {name:'范冰冰', gender:'女', age: 24},
+        {name:'刘亦菲', gender:'女', age: 18},
+        {name:'古力娜扎', gender:'女', age: 25}
+      ]
+    }
+  })
+</script>
+</body>
+</html>
